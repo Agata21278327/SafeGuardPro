@@ -1,7 +1,8 @@
-package com.programardores.safeguardpro
+package com.programardores.safeguardpro.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.programardores.safeguardpro.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
