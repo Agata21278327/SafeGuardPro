@@ -8,7 +8,7 @@
 
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar4"
+        android:id="@+id/tvheader"
         android:layout_width="448dp"
         android:layout_height="66dp"
         android:background="?attr/colorPrimary"
@@ -42,7 +42,7 @@
         tools:layout_editor_absoluteY="86dp" />
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar5"
+        android:id="@+id/tvfooter"
         android:layout_width="411dp"
         android:layout_height="65dp"
         android:background="?attr/colorPrimary"
@@ -53,7 +53,7 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo"
         android:layout_width="127dp"
         android:layout_height="118dp"
         app:srcCompat="@drawable/capacete"
@@ -148,7 +148,7 @@
         tools:layout_editor_absoluteY="552dp" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/logo2"
         android:layout_width="68dp"
         android:layout_height="69dp"
         app:srcCompat="@drawable/image_removebg_preview"

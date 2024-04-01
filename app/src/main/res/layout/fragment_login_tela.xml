@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/tvNavbar"
@@ -22,11 +22,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Olá novo usuário!"
+        android:text="Olá usuário!"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="105dp" />
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="135dp" />
 
     <TextView
         android:id="@+id/tvBemvindo"
@@ -36,41 +36,19 @@
         android:text="Bem-vindo ao Safe Guard!"
         android:textColor="@color/material_dynamic_neutral_variant40"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="159dp" />
-
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="192dp" />
 
     <TextView
         android:id="@+id/tvMercado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Por favor complete os campos abaixo para terminar seu cadastro."
+        android:text="O número 1 do mercado."
         android:textColor="@color/material_dynamic_neutral_variant40"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="182dp" />
-
-    <TextView
-        android:id="@+id/tvNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:text="Nome"
-        android:textColor="@color/material_dynamic_neutral_variant50"
-        android:textSize="20dp"
         tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="241dp" />
-
-    <EditText
-        android:id="@+id/edtNome"
-        android:layout_width="362dp"
-        android:layout_height="40dp"
-        android:fontFamily="serif"
-        android:hint="Digite seu nome completo"
-        android:inputType="text"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="268dp" />
+        tools:layout_editor_absoluteY="215dp" />
 
     <TextView
         android:id="@+id/tvEmail"
@@ -81,7 +59,7 @@
         android:textColor="@color/material_dynamic_neutral_variant50"
         android:textSize="20dp"
         tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="318dp" />
+        tools:layout_editor_absoluteY="278dp" />
 
     <EditText
         android:id="@+id/edtUsuario"
@@ -91,28 +69,7 @@
         android:hint="Digite seu e-mail"
         android:inputType="text"
         tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="345dp" />
-
-    <TextView
-        android:id="@+id/tvCpf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:text="CPF"
-        android:textColor="@color/material_dynamic_neutral_variant50"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="391dp" />
-
-    <EditText
-        android:id="@+id/edtConfirmEmail"
-        android:layout_width="362dp"
-        android:layout_height="40dp"
-        android:fontFamily="serif"
-        android:hint="Informe seu CPF"
-        android:inputType="text"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="418dp" />
+        tools:layout_editor_absoluteY="305dp" />
 
     <TextView
         android:id="@+id/tvSenha"
@@ -123,7 +80,7 @@
         android:textColor="@color/material_dynamic_neutral_variant50"
         android:textSize="20dp"
         tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="468dp" />
+        tools:layout_editor_absoluteY="363dp" />
 
     <EditText
         android:id="@+id/edtSenha"
@@ -134,58 +91,99 @@
         android:inputType="number"
         android:maxLength="6"
         tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="495dp" />
+        tools:layout_editor_absoluteY="390dp" />
+
+    <TextView
+        android:id="@+id/tvSenhaEsq"
+        android:layout_width="134dp"
+        android:layout_height="20dp"
+        android:text="Esqueceu a senha?"
+        android:textColor="@color/material_dynamic_neutral_variant50"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="459dp" />
+
+    <RadioButton
+        android:id="@+id/tvCheck"
+        android:layout_width="149dp"
+        android:layout_height="24dp"
+        android:text="Lembrar usuário?"
+        android:textColor="@color/material_dynamic_neutral_variant50"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="459dp" />
 
     <Button
-        android:id="@+id/btnCadastrar"
+        android:id="@+id/btnEntrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/orange"
-        android:text="Cadastrar"
+        android:text="Entrar"
         android:textSize="17dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="572dp" />
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="499dp" />
 
     <TextView
         android:id="@+id/tvConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Já possui uma conta?"
+        android:text="Não possui uma conta?"
         android:textColor="@color/material_dynamic_neutral_variant50"
         android:textStyle="italic"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="632dp" />
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="613dp" />
 
     <TextView
-        android:id="@+id/tvEntrar"
+        android:id="@+id/tvCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"
-        android:text="Entrar"
+        android:text="Cadastre-se"
         android:textColor="@color/blue"
         android:textStyle="italic"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="632dp" />
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="613dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="65dp"
+        android:layout_height="19dp"
+        android:fontFamily="serif"
+        android:text="É gestor?"
+        android:textColor="@color/material_dynamic_neutral_variant50"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="579dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text=" Clique aqui."
+        android:textColor="@color/blue"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="579dp" />
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
-        android:layout_width="445dp"
+        android:id="@+id/tvfooter"
+        android:layout_width="425dp"
         android:layout_height="69dp"
         android:background="?attr/colorPrimary"
         android:backgroundTint="@color/orange"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="-17dp"
+        tools:layout_editor_absoluteX="-7dp"
         tools:layout_editor_absoluteY="668dp" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="102dp"
-        android:layout_height="107dp"
+        android:id="@+id/logo"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
         app:srcCompat="@drawable/capacete"
-        tools:layout_editor_absoluteX="309dp"
-        tools:layout_editor_absoluteY="630dp" />
+        tools:layout_editor_absoluteX="299dp"
+        tools:layout_editor_absoluteY="625dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

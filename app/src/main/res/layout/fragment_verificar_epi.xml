@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar3"
-        android:layout_width="417dp"
-        android:layout_height="58dp"
-        android:backgroundTint="@color/orange"
+        android:id="@+id/tvheader"
+        android:layout_width="420dp"
+        android:layout_height="65dp"
         android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/orange"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteX="-5dp"
         tools:layout_editor_absoluteY="-3dp" />
 
     <TextView
@@ -21,11 +22,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Entregas de EPI"
+        android:text="Consultar EPIs"
         android:textSize="25dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="108dp" />
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <TextView
+        android:id="@+id/tvNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Nome do EPI"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+    <EditText
+        android:id="@+id/edtUsuario"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:fontFamily="serif"
+        android:hint="Digite o nome do EPI"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="217dp" />
 
     <TextView
         android:id="@+id/tvCodigo"
@@ -35,7 +56,7 @@
         android:text="Codigo do EPI"
         android:textSize="20dp"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="176dp" />
+        tools:layout_editor_absoluteY="277dp" />
 
     <EditText
         android:id="@+id/edtCodigo"
@@ -45,28 +66,15 @@
         android:hint="Digite o codigo do EPI"
         android:inputType="text"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="203dp" />
+        tools:layout_editor_absoluteY="304dp" />
 
-
-    <TextView
-        android:id="@+id/tvFunc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:text="Funcionario"
-        android:textSize="20dp"
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
+        android:text="Está dentro da validade?"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="271dp" />
-
-    <EditText
-        android:id="@+id/edtFunc"
-        android:layout_width="357dp"
-        android:layout_height="47dp"
-        android:fontFamily="serif"
-        android:hint="Digite o nome do funcionario recebedor"
-        android:inputType="text"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="298dp" />
+        tools:layout_editor_absoluteY="361dp" />
 
     <Button
         android:id="@+id/button"
@@ -75,24 +83,26 @@
         android:backgroundTint="@color/orange"
         android:text="Confirmar"
         tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="444dp" />
+        tools:layout_editor_absoluteY="449dp" />
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar8"
-        android:layout_width="416dp"
-        android:layout_height="61dp"
-        android:backgroundTint="@color/orange"
+        android:id="@+id/tvfooter"
+        android:layout_width="425dp"
+        android:layout_height="73dp"
         android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/orange"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="671dp" />
+        tools:layout_editor_absoluteX="-9dp"
+        tools:layout_editor_absoluteY="665dp" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="130dp"
-        android:layout_height="124dp"
+        android:id="@+id/logo"
+        android:layout_width="117dp"
+        android:layout_height="117dp"
         app:srcCompat="@drawable/capacete"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="608dp" />
+        tools:layout_editor_absoluteX="298dp"
+        tools:layout_editor_absoluteY="621dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

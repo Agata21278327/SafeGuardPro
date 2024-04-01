@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/tvCard1"
+        android:id="@+id/tvheader"
         android:layout_width="424dp"
         android:layout_height="61dp"
         android:backgroundTint="@color/orange"
@@ -14,7 +14,7 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="-2dp" />
+        tools:layout_editor_absoluteY="-2dp"/>
 
     <TextView
         android:id="@+id/textView"
@@ -120,7 +120,7 @@
         tools:layout_editor_absoluteY="253dp" />
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/tvCard"
+        android:id="@+id/tvfooter"
         android:layout_width="424dp"
         android:layout_height="61dp"
         android:backgroundTint="@color/orange"
@@ -131,7 +131,7 @@
         tools:layout_editor_absoluteY="673dp" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/logo"
         android:layout_width="162dp"
         android:layout_height="162dp"
         app:srcCompat="@drawable/capacete"

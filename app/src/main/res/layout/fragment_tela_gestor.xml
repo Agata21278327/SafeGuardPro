@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar11"
+        android:id="@+id/tvheader"
         android:layout_width="422dp"
         android:layout_height="66dp"
         android:backgroundTint="@color/orange"
@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="-2dp" />
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar12"
+        android:id="@+id/tvfooter"
         android:layout_width="424dp"
         android:layout_height="67dp"
         android:backgroundTint="@color/orange"
@@ -178,7 +178,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/logo"
         android:layout_width="133dp"
         android:layout_height="132dp"
         app:srcCompat="@drawable/capacete"
@@ -186,7 +186,7 @@
         tools:layout_editor_absoluteY="600dp" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/logo2"
         android:layout_width="61dp"
         android:layout_height="53dp"
         app:srcCompat="@drawable/image_removebg_preview"
