@@ -1,0 +1,171 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tvheader"
+        android:layout_width="411dp"
+        android:layout_height="78dp"
+        android:background="@color/orange"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvOla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Olá novo gestor!"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/tvBemvindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Bem-vindo ao Safe Guard!"
+        android:textColor="@color/material_dynamic_neutral_variant40"
+        android:textSize="17sp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="192dp"/>
+
+    <TextView
+        android:id="@+id/tvMercado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Por favor complete os campos abaixo para terminar seu cadastro."
+        android:textColor="@color/material_dynamic_neutral_variant40"
+        android:textSize="17sp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="215dp"/>
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="E-mail"
+        android:textColor="@color/material_dynamic_neutral_variant50"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="281dp"/>
+
+    <EditText
+        android:id="@+id/edtUsuario"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:fontFamily="serif"
+        android:hint="Digite seu e-mail"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="308dp"/>
+
+    <TextView
+        android:id="@+id/tvConfirmEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Confirme seu e-mail"
+        android:textColor="@color/material_dynamic_neutral_variant50"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="363dp"/>
+
+    <EditText
+        android:id="@+id/edtConfirmEmail"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:fontFamily="serif"
+        android:hint="Confirme seu e-mail"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="390dp"/>
+
+    <TextView
+        android:id="@+id/tvSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Senha"
+        android:textColor="@color/material_dynamic_neutral_variant50"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="448dp" />
+
+    <EditText
+        android:id="@+id/edtSenha"
+        android:layout_width="365dp"
+        android:layout_height="41dp"
+        android:fontFamily="serif"
+        android:hint="Digite sua senha"
+        android:inputType="number"
+        android:maxLength="6"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="475dp" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:text="Cadastrar"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="545dp"/>
+
+    <TextView
+        android:id="@+id/tvConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Já possui uma conta?"
+        android:textColor="@color/material_dynamic_neutral_variant50"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="613dp"/>
+
+    <TextView
+        android:id="@+id/tvEntrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="Entrar"
+        android:textColor="@color/blue"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="613dp"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tvfooter"
+        android:layout_width="428dp"
+        android:layout_height="66dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/orange"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="671dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="129dp"
+        android:layout_height="118dp"
+        app:srcCompat="@drawable/capacete"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="619dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tvheader"
+        android:layout_width="417dp"
+        android:layout_height="67dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/orange"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/tvEpis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Cadastrar novo EPI"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="111dp" />
+
+    <TextView
+        android:id="@+id/tvNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Nome do EPI"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <EditText
+        android:id="@+id/edtUsuario"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:fontFamily="serif"
+        android:hint="Digite o nome do EPI"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="203dp" />
+
+    <TextView
+        android:id="@+id/tvCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Codigo do EPI"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <EditText
+        android:id="@+id/edtCodigo"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:fontFamily="serif"
+        android:hint="Digite o codigo do EPI"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="291dp" />
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Data de validade"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <EditText
+        android:id="@+id/edtData"
+        android:layout_width="226dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Selecione a data"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="379dp" />
+
+    <TextView
+        android:id="@+id/tvTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Tipo de EPI"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <EditText
+        android:id="@+id/edtTipo"
+        android:layout_width="357dp"
+        android:layout_height="47dp"
+        android:hint="Descreva o tipo de EPI do item cadastrado"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:text="Confirmar"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="548dp" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tvfooter"
+        android:layout_width="420dp"
+        android:layout_height="62dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/orange"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="-7dp"
+        tools:layout_editor_absoluteY="670dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="126dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/capacete"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="622dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
