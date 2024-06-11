@@ -63,7 +63,7 @@ class FuncionarioCadastroViewModel(application: Application): AndroidViewModel(a
         }
     }
 
-    fun update(id: Int, funcionario: Funcionario){
+    fun update(funcionario: Funcionario){
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val updatedFuncionario = repository.updateFuncionario(funcionario.id, funcionario)

@@ -5,22 +5,21 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.programardores.safeguardpro.databinding.ListItemEpiBinding
 import com.programardores.safeguardpro.service.model.Epi
-import com.programardores.safeguardpro.service.model.Funcionario
 
-class EpiAdapter(funcionarios: List<Epi>?, private val clickListListener: (Epi) -> Unit) :
+class EpiAdapter(epis: List<Epi>?, private val clickListListener: (Epi) -> Unit) :
     RecyclerView.Adapter<EpiAdapter.EpiViewHolder>() {
 
-    //Criar uma lista vazia de pessoas
+    //Criar uma lista vazia de epis
     private var epiList: List<Epi> = arrayListOf()
 
     class EpiViewHolder(private val binding: ListItemEpiBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         //Carrega as informações da pessoa na lista
-        fun bind(funcionario: Epi, clickListListener: (Epi) -> Unit) {
+        fun bind(epi: Epi, clickListListener: (Epi) -> Unit) {
 
             binding.root.setOnClickListener {
-                clickListListener(funcionario)
+                clickListListener(epi)
             }
         }
     }
@@ -41,7 +40,7 @@ class EpiAdapter(funcionarios: List<Epi>?, private val clickListListener: (Epi) 
         holder.bind(epiList[position], clickListListener)
     }
 
-    // carrega a lista de pessoas paara serem exibidas
+    // carrega a lista de epis paara serem exibidas
     fun updateEpi(list: List<Epi>){
         epiList = list
         notifyDataSetChanged()

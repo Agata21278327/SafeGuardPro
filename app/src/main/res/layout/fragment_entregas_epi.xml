@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="100dp">
+    android:paddingTop="50dp">
 
     <TextView
         android:id="@+id/tvEpis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Entregas de EPI"
+        android:text="Emprestimo de EPI"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,16 +61,95 @@
         app:layout_constraintStart_toStartOf="@+id/tvFunc"
         app:layout_constraintTop_toBottomOf="@+id/tvFunc" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/tvEntrega"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:fontFamily="serif"
+        android:layout_marginTop="10dp"
+        android:text="Data de Emprestimo:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/edtFunc"
+        app:layout_constraintTop_toBottomOf="@+id/edtFunc" />
+
+
+    <EditText
+        android:id="@+id/edtEntrega"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:fontFamily="serif"
+        android:hint="Digite a data de emprestimo da epi"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/tvEntrega"
+        app:layout_constraintTop_toBottomOf="@+id/tvEntrega" />
+
+    <TextView
+        android:id="@+id/tvCa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:layout_marginTop="10dp"
+        android:text="CA do epi:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/edtEntrega"
+        app:layout_constraintTop_toBottomOf="@+id/edtEntrega" />
+
+
+    <EditText
+        android:id="@+id/edtCa"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:fontFamily="serif"
+        android:hint="Digite o CA epi"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/tvCa"
+        app:layout_constraintTop_toBottomOf="@+id/tvCa" />
+
+    <TextView
+        android:id="@+id/tvPeriodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:layout_marginTop="10dp"
+        android:text="Periodo de validade:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/edtCa"
+        app:layout_constraintTop_toBottomOf="@+id/edtCa" />
+
+
+    <EditText
+        android:id="@+id/edtPeriodo"
+        android:layout_width="362dp"
+        android:layout_height="40dp"
+        android:fontFamily="serif"
+        android:hint="Digite o periodo de validade do epi"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/tvPeriodo"
+        app:layout_constraintTop_toBottomOf="@+id/tvPeriodo" />
+
+
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/orange"
+        android:layout_marginTop="20dp"
         android:text="Confirmar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtFunc" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPeriodo" />
+
+    <Button
+        android:id="@+id/btnDeletar"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfirmar" />
 
     <ImageView
         android:id="@+id/logo"

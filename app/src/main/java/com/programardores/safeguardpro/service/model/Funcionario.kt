@@ -8,5 +8,6 @@ data class Funcionario(
     @PrimaryKey
     var id: Int = 0,
     var nome: String = "",
-    var cpf: String = ""
+    var cpf: String = "",
+    var senha: String = ""
 )

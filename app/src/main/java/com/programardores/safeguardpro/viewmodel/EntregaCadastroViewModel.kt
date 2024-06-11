@@ -62,7 +62,7 @@ class EntregaCadastroViewModel(application: Application): AndroidViewModel(appli
         }
     }
 
-    fun update(id: Int, entrega: Entrega){
+    fun update(entrega: Entrega){
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val updatedEntrega = repository.updateEntrega(entrega.id, entrega)

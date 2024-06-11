@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class Epi(
     @PrimaryKey
     var id: Int = 0,
-    var nome: String = "0",
+    var nome: String = "",
     var descricao: String = "",
     var validade: String = ""
 )

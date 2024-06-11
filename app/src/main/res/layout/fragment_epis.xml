@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.FuncionariosFragment">
+    tools:context=".view.EpisFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFuncionarios"
+        android:id="@+id/rvEpis"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        tools:listitem="@layout/list_item_funcionario" />
+        tools:listitem="@layout/list_item_epi" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAdd"

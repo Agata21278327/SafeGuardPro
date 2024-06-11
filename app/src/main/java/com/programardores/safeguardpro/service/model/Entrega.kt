@@ -5,8 +5,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "entrega")
 data class Entrega(
-    @PrimaryKey
     var id: Int = 0,
+    var epi_id: Int = 0,
+    var funcionario_id: Int = 0,
     var data_entrega: String = "",
     var ca: Int = 0,
     var periodo: String = ""

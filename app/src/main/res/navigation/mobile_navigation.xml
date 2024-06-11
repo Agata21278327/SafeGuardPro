@@ -56,6 +56,21 @@
         android:name="com.programardores.safeguardpro.view.EntregasEpiFragment"
         android:label="EntregasEpiFragment"
         tools:layout="@layout/fragment_entregas_epi"/>
+    <fragment
+        android:id="@+id/entregasFragment"
+        android:name="com.programardores.safeguardpro.view.EntregasFragment"
+        android:label="fragment_entregas"
+        tools:layout="@layout/fragment_entregas" />
+    <fragment
+        android:id="@+id/episFragment"
+        android:name="com.programardores.safeguardpro.view.EpisFragment"
+        android:label="fragment_epis"
+        tools:layout="@layout/fragment_epis" />
+    <fragment
+        android:id="@+id/funcionariosFragment"
+        android:name="com.programardores.safeguardpro.view.FuncionariosFragment"
+        android:label="fragment_funcionarios"
+        tools:layout="@layout/fragment_funcionarios" />
 
 
 </navigation>

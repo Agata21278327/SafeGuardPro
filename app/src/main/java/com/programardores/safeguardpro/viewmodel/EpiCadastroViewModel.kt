@@ -62,7 +62,7 @@ class EpiCadastroViewModel(application: Application): AndroidViewModel(applicati
         }
     }
 
-    fun update(id: Int, epi: Epi){
+    fun update(epi: Epi){
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val updatedEpi = repository.updateEpi(epi.id, epi)

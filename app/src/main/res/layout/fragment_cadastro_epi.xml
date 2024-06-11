@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp">
@@ -30,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvEpis" />
 
     <EditText
-        android:id="@+id/edtUsuario"
+        android:id="@+id/edtNome"
         android:layout_width="362dp"
         android:layout_height="40dp"
         android:fontFamily="serif"
@@ -40,27 +41,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNome" />
 
     <TextView
-        android:id="@+id/tvCodigo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:text="CA do Epi"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/edtUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/edtUsuario" />
-
-    <EditText
-        android:id="@+id/edtCodigo"
-        android:layout_width="362dp"
-        android:layout_height="40dp"
-        android:fontFamily="serif"
-        android:hint="Insira o CA do EPI"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/tvCodigo"
-        app:layout_constraintTop_toBottomOf="@+id/tvCodigo" />
-
-    <TextView
         android:id="@+id/tvData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,8 +48,8 @@
         android:text="Data de validade"
         android:textSize="20dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/edtCodigo"
-        app:layout_constraintTop_toBottomOf="@+id/edtCodigo" />
+        app:layout_constraintStart_toStartOf="@+id/edtNome"
+        app:layout_constraintTop_toBottomOf="@+id/edtNome" />
 
     <EditText
         android:id="@+id/edtData"
@@ -82,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvData" />
 
     <TextView
-        android:id="@+id/tvTipo"
+        android:id="@+id/tvDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
@@ -93,16 +73,16 @@
         app:layout_constraintTop_toBottomOf="@+id/edtData" />
 
     <EditText
-        android:id="@+id/edtTipo"
+        android:id="@+id/edtDesc"
         android:layout_width="357dp"
         android:layout_height="47dp"
         android:hint="Faça um pequeno resumo do Epi"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/tvTipo"
-        app:layout_constraintTop_toBottomOf="@+id/tvTipo" />
+        app:layout_constraintStart_toStartOf="@+id/tvDesc"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnConfirmar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
@@ -111,7 +91,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTipo" />
+        app:layout_constraintTop_toBottomOf="@+id/edtDesc" />
+
+    <Button
+        android:id="@+id/btnDeletar"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfirmar" />
 
     <ImageView
         android:id="@+id/logo"
