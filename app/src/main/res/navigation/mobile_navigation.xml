@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mobile_navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.programardores.safeguardpro.view.InicioFragment"
+        android:label="InicioFragment"
+        tools:layout="@layout/fragment_inicio"/>
+
+    <fragment
+        android:id="@+id/cadastroEpiFragment"
+        android:name="com.programardores.safeguardpro.view.CadastroEpiFragment"
+        android:label="CadastroEpiFragment"
+        tools:layout="@layout/fragment_cadastro_epi"/>
+    <fragment
+        android:id="@+id/telaFuncionarioFragment"
+        android:name="com.programardores.safeguardpro.view.TelaFuncionarioFragment"
+        android:label="TelaFuncionarioFragment"
+        tools:layout="@layout/fragment_tela_funcionario"/>
+    <fragment
+        android:id="@+id/loginTelaFragment"
+        android:name="com.programardores.safeguardpro.view.LoginTelaFragment"
+        android:label="LoginTelaFragment"
+        tools:layout="@layout/fragment_login_tela" />
+    <fragment
+        android:id="@+id/telaGestorFragment"
+        android:name="com.programardores.safeguardpro.view.TelaGestorFragment"
+        android:label="TelaGestorFragment"
+        tools:layout="@layout/fragment_tela_gestor"/>
+    <fragment
+        android:id="@+id/funcionarioCadastroFragment"
+        android:name="com.programardores.safeguardpro.view.FuncionarioCadastroFragment"
+        android:label="FuncionarioCadastroFragment"
+        tools:layout="@layout/fragment_funcionario_cadastro"/>
+    <fragment
+        android:id="@+id/epiTelaInicialFragment"
+        android:name="com.programardores.safeguardpro.view.EpiTelaInicialFragment"
+        android:label="EpiTelaInicialFragment"
+        tools:layout="@layout/fragment_epi_tela_inicial"/>
+    <fragment
+        android:id="@+id/detalhesEpiFragment"
+        android:name="com.programardores.safeguardpro.view.DetalhesEpiFragment"
+        android:label="DetalhesEpiFragment"
+        tools:layout="@layout/fragment_detalhes_epi"/>
+    <fragment
+        android:id="@+id/verificarEpiFragment"
+        android:name="com.programardores.safeguardpro.view.VerificarEpiFragment"
+        android:label="VerificarEpiFragment"
+        tools:layout="@layout/fragment_verificar_epi"/>
+    <fragment
+        android:id="@+id/entregasEpiFragment"
+        android:name="com.programardores.safeguardpro.view.EntregasEpiFragment"
+        android:label="EntregasEpiFragment"
+        tools:layout="@layout/fragment_entregas_epi"/>
+
 
 </navigation>

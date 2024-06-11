@@ -1,18 +1,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/tvheader"
-        android:layout_width="428dp"
-        android:layout_height="63dp"
-        android:backgroundTint="@color/orange"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="-6dp" />
+    android:layout_height="match_parent"
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/tvEpis"
@@ -22,8 +12,10 @@
         android:text="Detalhes do EPI"
         android:textSize="25dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="106dp"/>
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
@@ -33,8 +25,9 @@
         android:fontFamily="serif"
         android:text="Nome do EPI: Óculos Protetor"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="191dp" />
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEpis" />
 
     <TextView
         android:id="@+id/tvCodigo"
@@ -43,19 +36,8 @@
         android:fontFamily="serif"
         android:text="Codigo do EPI: 2i32i3"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="236dp" />
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/tvfooter"
-        android:layout_width="427dp"
-        android:layout_height="63dp"
-        android:backgroundTint="@color/orange"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="-7dp"
-        tools:layout_editor_absoluteY="669dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNome" />
 
     <TextView
         android:id="@+id/textView2"
@@ -64,8 +46,8 @@
         android:fontFamily="serif"
         android:text="Data de validade: 12/02/2026"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="277dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCodigo" />
 
     <TextView
         android:id="@+id/tvTipo"
@@ -74,8 +56,8 @@
         android:fontFamily="serif"
         android:text="Tipo: Óculos Policarbonato para Lente de Grau – Kalipso"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="318dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button2"
@@ -83,32 +65,35 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/orange"
         android:text="Confirmar"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="438dp" />
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipo" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_add"
-        tools:layout_editor_absoluteX="331dp"
-        tools:layout_editor_absoluteY="151dp" />
+        android:layout_marginLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNome"
+        app:layout_constraintStart_toEndOf="@+id/tvNome"
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_delete"
-        tools:layout_editor_absoluteX="363dp"
-        tools:layout_editor_absoluteY="151dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="144dp"
         android:layout_height="136dp"
-        app:srcCompat="@drawable/capacete"
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="604dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/capacete" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

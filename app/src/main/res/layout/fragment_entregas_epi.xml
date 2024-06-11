@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/tvheader"
-        android:layout_width="417dp"
-        android:layout_height="58dp"
-        android:backgroundTint="@color/orange"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="-3dp" />
+    android:layout_height="match_parent"
+    android:paddingTop="100dp">
 
     <TextView
         android:id="@+id/tvEpis"
@@ -24,39 +13,42 @@
         android:text="Entregas de EPI"
         android:textSize="25dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="108dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvCodigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:fontFamily="serif"
-        android:text="Codigo do EPI"
+        android:text="Codigo do EPI:"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="176dp" />
+        app:layout_constraintStart_toStartOf="@+id/edtCodigo"
+        app:layout_constraintTop_toBottomOf="@+id/tvEpis" />
+
 
     <EditText
         android:id="@+id/edtCodigo"
         android:layout_width="362dp"
         android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="serif"
         android:hint="Digite o codigo do EPI"
         android:inputType="text"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="203dp" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCodigo" />
 
     <TextView
         android:id="@+id/tvFunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Funcionario"
+        android:text="Funcionário:"
+        android:layout_marginTop="10dp"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="271dp" />
+        app:layout_constraintStart_toStartOf="@+id/edtCodigo"
+        app:layout_constraintTop_toBottomOf="@+id/edtCodigo" />
 
     <EditText
         android:id="@+id/edtFunc"
@@ -65,34 +57,25 @@
         android:fontFamily="serif"
         android:hint="Digite o nome do funcionario recebedor"
         android:inputType="text"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="298dp" />
+        app:layout_constraintStart_toStartOf="@+id/tvFunc"
+        app:layout_constraintTop_toBottomOf="@+id/tvFunc" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
         android:backgroundTint="@color/orange"
         android:text="Confirmar"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="444dp" />
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/tvfooter"
-        android:layout_width="416dp"
-        android:layout_height="61dp"
-        android:backgroundTint="@color/orange"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="671dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFunc" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="130dp"
         android:layout_height="124dp"
-        app:srcCompat="@drawable/capacete"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="608dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/capacete" />
 </androidx.constraintlayout.widget.ConstraintLayout>
