@@ -1,4 +1,5 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -127,12 +128,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:fontFamily="serif"
-        android:layout_marginTop="20dp"
         android:text="Não possui uma conta?"
         android:textColor="@color/material_dynamic_neutral_variant50"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrar" />
 
     <TextView
         android:id="@+id/tvCadastro"
@@ -141,34 +141,8 @@
         android:paddingLeft="5dp"
         android:text="Cadastre-se"
         android:textColor="@color/blue"
-        android:layout_marginTop="20dp"
         android:textStyle="italic"
         app:layout_constraintStart_toEndOf="@+id/tvConta"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="65dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="120dp"
-        android:fontFamily="serif"
-        android:text="É gestor?"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/material_dynamic_neutral_variant50"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEntrar" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:text=" Clique aqui."
-        android:layout_marginTop="20dp"
-        android:textColor="@color/blue"
-        android:textStyle="italic"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/btnEntrar" />
 
     <ImageView
