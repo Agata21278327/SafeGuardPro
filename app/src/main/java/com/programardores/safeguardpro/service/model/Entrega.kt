@@ -3,7 +3,6 @@ package com.programardores.safeguardpro.service.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "entrega")
 data class Entrega(
     var id: Int = 0,
     var epi_id: Int = 0,

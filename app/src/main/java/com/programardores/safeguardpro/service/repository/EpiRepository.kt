@@ -11,11 +11,12 @@ class EpiRepository(context: Context) {
 
     private val mRemote = RetrofitClient.createService(EpiService::class.java)
 
-    private val epiEmpty = Epi(0,"", "","")
+    private val epiEmpty = Epi(0,0, "","")
 
     suspend fun insertEpi(epi: Epi): Epi {
         return mRemote.createEpi(
             nome = epi.nome.toRequestBody("text/plain".toMediaTypeOrNull()),
+            ca = epi.ca.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
             descricao = epi.descricao.toRequestBody("text/plain".toMediaTypeOrNull()),
             validade = epi.validade.toRequestBody("text/plain".toMediaTypeOrNull())
         ).body() ?: epiEmpty
@@ -30,6 +31,15 @@ class EpiRepository(context: Context) {
         }
     }
 
+    suspend fun getEpiByCa(ca: Int): Epi {
+        val response = mRemote.getEpiById(ca)
+        return if (response.isSuccessful){
+            response.body()?.first() ?: epiEmpty
+        } else {
+            epiEmpty
+        }
+    }
+
     suspend fun getEpis(): List<Epi> {
         return  mRemote.getEpis()
     }
@@ -37,6 +47,7 @@ class EpiRepository(context: Context) {
     suspend fun updateEpi(id: Int, epi: Epi): Epi {
         return mRemote.updateEpi(
             nome = epi.nome.toRequestBody("text/plain".toMediaTypeOrNull()),
+            ca = epi.ca.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
             descricao = epi.descricao.toRequestBody("text/plain".toMediaTypeOrNull()),
             validade = epi.validade.toRequestBody("text/plain".toMediaTypeOrNull()),
             epiId = id

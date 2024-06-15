@@ -19,18 +19,25 @@ interface FuncionarioService {
     @POST("addFuncionario")
     suspend fun createFuncionario(
         @Part("nome") nome: RequestBody,
-        @Part("cpf") cpf: RequestBody
+        @Part("cpf") cpf: RequestBody,
+        @Part("senha") senha: RequestBody,
+        @Part("admin") admin: RequestBody,
     ): Response<Funcionario>
 
     @GET("getFuncionario/{funcionario_id}")
     suspend fun getFuncionarioById(@Path("funcionario_id") id: Int): Response<List<Funcionario>>
+
+    @GET("getFuncionario/{funcionario_cpf}")
+    suspend fun getFuncionarioByCpf(@Path("funcionario_ca") cpf: String): Response<List<Funcionario>>
 
     @Multipart
     @PUT("updateFuncionario/{funcionario_id}")
     suspend fun updateFuncionario(
         @Path("funcionario_id") funcionarioId: Int,
         @Part("nome") nome: RequestBody,
-        @Part("cpf") cpf: RequestBody
+        @Part("cpf") cpf: RequestBody,
+        @Part("senha") senha: RequestBody,
+        @Part("admin") admin: RequestBody,
     ): Response<Funcionario>
 
     @DELETE("deleteFuncionario/{funcionario_id}")

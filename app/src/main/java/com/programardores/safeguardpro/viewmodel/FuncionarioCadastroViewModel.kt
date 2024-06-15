@@ -63,6 +63,16 @@ class FuncionarioCadastroViewModel(application: Application): AndroidViewModel(a
         }
     }
 
+    fun getFuncionarioByCpf(cpf: String){
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                mFuncionario.postValue(repository.getFuncionarioByCpf(cpf))
+            } catch (e: Exception) {
+                mErro.postValue(e.message)
+            }
+        }
+    }
+
     fun update(funcionario: Funcionario){
         viewModelScope.launch(Dispatchers.IO) {
             try {

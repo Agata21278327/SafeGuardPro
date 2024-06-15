@@ -19,6 +19,7 @@ interface EpiService {
     @POST("addEpi")
     suspend fun createEpi(
         @Part("nome") nome: RequestBody,
+        @Part("ca") ca: RequestBody,
         @Part("descrição") descricao: RequestBody,
         @Part("validade") validade: RequestBody
     ): Response<Epi>
@@ -26,11 +27,15 @@ interface EpiService {
     @GET("getEpi/{epi_id}")
     suspend fun getEpiById(@Path("epi_id") id: Int): Response<List<Epi>>
 
+    @GET("getEpi/{epi_ca}")
+    suspend fun getEpiByCa(@Path("epi_ca") ca: Int): Response<List<Epi>>
+
     @Multipart
     @PUT("updateEpi/{epi_id}")
     suspend fun updateEpi(
         @Path("epi_id") epiId: Int,
         @Part("nome") nome: RequestBody,
+        @Part("ca") ca: RequestBody,
         @Part("descrição") descricao: RequestBody,
         @Part("validade") validade: RequestBody
     ): Response<Epi>

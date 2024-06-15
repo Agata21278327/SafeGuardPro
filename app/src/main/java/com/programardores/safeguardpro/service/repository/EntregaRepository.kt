@@ -10,13 +10,15 @@ import okhttp3.RequestBody.Companion.toRequestBody
 class EntregaRepository(context: Context) {
     private val mRemote = RetrofitClient.createService(EntregaService::class.java)
 
-    private val entregaEmpty = Entrega(0,"", 0,"")
+    private val entregaEmpty = Entrega(0,0, 0, "",0)
 
     suspend fun insertEntrega(entrega: Entrega): Entrega {
         return mRemote.createEntrega(
+            epi_id = entrega.epi_id.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
+            funcionario_id = entrega.funcionario_id.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
             data_entrega = entrega.data_entrega.toRequestBody("text/plain".toMediaTypeOrNull()),
             ca = entrega.ca.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
-            periodo = entrega.periodo.toRequestBody("text/plain".toMediaTypeOrNull())
+            periodo = entrega.periodo.toRequestBody("text/plain".toMediaTypeOrNull()),
         ).body() ?: entregaEmpty
     }
 
@@ -35,6 +37,8 @@ class EntregaRepository(context: Context) {
 
     suspend fun updateEntrega(id: Int, entrega: Entrega): Entrega {
         return mRemote.updateEntrega(
+            epi_id = entrega.epi_id.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
+            funcionario_id = entrega.funcionario_id.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
             data_entrega = entrega.data_entrega.toRequestBody("text/plain".toMediaTypeOrNull()),
             ca = entrega.ca.toString().toRequestBody("text/plain".toMediaTypeOrNull()),
             periodo = entrega.periodo.toRequestBody("text/plain".toMediaTypeOrNull()),

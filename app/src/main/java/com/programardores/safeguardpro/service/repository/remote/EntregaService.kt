@@ -18,6 +18,8 @@ interface EntregaService {
     @Multipart
     @POST("addEntrega")
     suspend fun createEntrega(
+        @Part("epi_id") epi_id: RequestBody,
+        @Part("funcionario_id") funcionario_id: RequestBody,
         @Part("data_entrega") data_entrega: RequestBody,
         @Part("ca") ca: RequestBody,
         @Part("periodo") periodo: RequestBody
@@ -30,6 +32,8 @@ interface EntregaService {
     @PUT("updateEntrega/{entrega_id}")
     suspend fun updateEntrega(
         @Path("entrega_id") entregaId: Int,
+        @Part("epi_id") epi_id: RequestBody,
+        @Part("funcionario_id") funcionario_id: RequestBody,
         @Part("data_entrega") data_entrega: RequestBody,
         @Part("ca") ca: RequestBody,
         @Part("periodo") periodo: RequestBody

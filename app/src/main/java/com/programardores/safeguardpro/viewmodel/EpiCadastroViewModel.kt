@@ -62,6 +62,16 @@ class EpiCadastroViewModel(application: Application): AndroidViewModel(applicati
         }
     }
 
+    fun getEpiByCa(ca: Int){
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                mEpi.postValue(repository.getEpiByCa(ca))
+            } catch (e: Exception) {
+                mErro.postValue(e.message)
+            }
+        }
+    }
+
     fun update(epi: Epi){
         viewModelScope.launch(Dispatchers.IO) {
             try {
